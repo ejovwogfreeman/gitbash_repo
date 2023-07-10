@@ -506,21 +506,77 @@
 ///////////////////////////////////////////////
 ///js function to return the sum of an array///
 ///////////////////////////////////////////////
-function getArrSum(arr) {
-  arrSum = arr.reduce((a, b) => a + b);
-  return arrSum;
-}
+// function getArrSum(arr) {
+//   arrSum = arr.reduce((a, b) => a + b);
+//   return arrSum;
+// }
 
-console.log(getArrSum([5, 9, 8, 90]));
+// console.log(getArrSum([5, 9, 8, 90]));
 
 ///////////////////////////////////////////////////////
 //js to return the sum of added digits of any number///
 ///////////////////////////////////////////////////////
 
-let num = prompt("enter a number").split("");
+// let num = prompt("enter a number").split("");
 
-let numArr = num.split("");
+// let numArr = num.split("");
 
-arrSum = numArr.reduce((a, b) => Number(a) + Number(b));
+// arrSum = numArr.reduce((a, b) => Number(a) + Number(b));
 
-console.log(arrSum);
+// console.log(arrSum);
+
+// const person = {
+//   name: "gb",
+//   email: "gb@gmail.com",
+//   isAdmin: true,
+// greet: () => {
+//   return "good morning " + this.name;
+// },
+//   greet: function () {
+//     return "good moring " + this.name;
+//   },
+// };
+
+// console.log(person.greet());
+
+// practice questions
+// Write a JavaScript function that reverses a number.
+// Example x = 32243;
+// Expected Output : 34223
+
+// function revereNum(x) {
+//   let arr = x.split("");
+//   arr.reverse();
+//   return arr.join("");
+// }
+///////////////////////
+///////////or//////////
+///////////////////////
+// function revereNum(x) {
+//   return x.split("").reverse().join("");
+// }
+// console.log(revereNum(num));
+
+/////////////////////////////
+/////////assignments/////////
+/////////////////////////////
+////////
+///1////
+////////
+// Write a JavaScript function that checks whether a
+// passed string is a palindrome or not?
+// A palindrome is word, phrase, or sequence that reads
+// the same backward as forward, e.g., madam or nurses run.
+////////
+///2////
+////////
+// write a function that returns the 20 percent of any number
+// let num = prompt("please enter a number");
+
+function isLeapYear(year) {
+  if (year % 4 === 0 || year % 400 === 0 || year % 100 === 0) {
+    return "This is a leapyear";
+  } else {
+    return "This is not a leapyear";
+  }
+}
