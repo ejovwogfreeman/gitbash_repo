@@ -573,10 +573,188 @@
 // write a function that returns the 20 percent of any number
 // let num = prompt("please enter a number");
 
-function isLeapYear(year) {
-  if (year % 4 === 0 || year % 400 === 0 || year % 100 === 0) {
-    return "This is a leapyear";
-  } else {
-    return "This is not a leapyear";
+// function isLeapYear(year) {
+//   if (year % 4 === 0 || year % 400 === 0 || year % 100 === 0) {
+//     return "This is a leapyear";
+//   } else {
+//     return "This is not a leapyear";
+//   }
+// }
+
+// function getLeapYear(x) {
+//   let date = new Date(x, 1, 29).getDate();
+//   if (date === 29) {
+//     return "This is a leapyear";
+//   } else {
+//     return "This is not a leapyear";
+//   }
+// }
+
+// console.log(getLeapYear(2023));
+
+// let date = new Date(2020, 1, 29).getDate();
+
+// console.log(date);
+
+// function getLeapYear(year) {
+//   let date = new Date(year, 1, 29).getDate();
+//   if (date === 29) {
+//     return "leapyear";
+//   } else {
+//     return "not leapyear";
+//   }
+// }
+
+// console.log(getLeapYear(2021));
+
+// function getCommonMultiples(x, y, z) {
+//   let num = x * y * z;
+//   for (let i = 1; i < num; i++) {
+//     if (i % x === 0 && i % y === 0 && i % z === 0) {
+//       console.log(i);
+//     }
+//   }
+// }
+// getCommonMultiples(2, 3, 6);
+
+// let rooster = [];
+// let name;
+
+// function addName() {
+//   name = prompt("Please add a name");
+//   rooster.push(name);
+// }
+
+// function removeName() {
+//   name = prompt("Please remove a name");
+//   rooster.splice(rooster.indexOf(name), 1);
+// }
+
+// function displayNames() {
+//   alert(rooster);
+// }
+
+// alert("Hello welcome to my school");
+
+// let question = prompt("Would you like to register? y/n");
+
+// var request;
+// if (question === "y") {
+//   while (request !== "quit") {
+//     request = prompt("would you like to add, remove, display or quit?");
+//     if (request === "add") {
+//       addName();
+//     } else if (request === "remove") {
+//       removeName();
+//     } else if (request === "display") {
+//       displayNames();
+//     } else if (request === "quit") {
+//       alert("Thanks for participating");
+//     } else {
+//       alert("Not recognized");
+//     }
+//   }
+// } else {
+//   alert("please refresh to start again");
+// }
+
+// js oop
+
+// 1) function and prototype method
+// 2) es6 classes
+
+// const person = {
+//   name: "gb",
+//   email: "gb@gmail.com",
+//   isMarried: true,
+//   greet: function () {
+//     return "good morning " + this.name;
+//   },
+// };
+
+// function Person(name, email, age) {
+//   this.name = name;
+//   this.email = email;
+//   this.age = age;
+//   // this.greet = function () {
+//   //   return `good morning ${this.name}`;
+//   // };
+// }
+
+// Person.prototype.greet = function () {
+//   return `good morning ${this.name}`;
+// };
+
+// const person1 = new Person("gb", "gb@gmail.com", "25");
+// const person2 = new Person("john", "john@gmail.com", "23");
+// console.log(person2);
+
+// es6 classes
+
+// class Person {
+//   constructor(name, email, age) {
+//     this.name = name;
+//     this.email = email;
+//     this.age = age;
+//   }
+//   greet() {
+//     return `good morning ${this.name}`;
+//   }
+// }
+
+// class inheritance
+
+// class Admin extends Person {
+//   constructor(name, email, age, isAdmin) {
+//     super(name, email, age);
+//     this.isAdmin = isAdmin;
+//   }
+//   deleteUser() {
+//     return `${this.name} has deleted a user`;
+//   }
+// }
+
+// const admin1 = new Admin("gb", "gb@gmail.com", 30, true);
+// console.log(admin1.greet());
+
+// rooster project
+
+let rooster = [];
+let name;
+
+function addName() {
+  name = prompt("please add a name");
+  rooster.push(name);
+}
+
+function removeName() {
+  name = prompt("please remove a name");
+  rooster.splice(rooster.indexOf(name), 1);
+}
+
+function displayNames() {
+  alert(rooster);
+}
+
+alert("Hello welcome to my shcool");
+
+let question = prompt("Would you like to register? y/n");
+if (question === "y") {
+  let reply;
+  while (reply !== "quit") {
+    reply = prompt("Would you like to add, remove, display or quit?");
+    if (reply === "add") {
+      addName();
+    } else if (reply === "remove") {
+      removeName();
+    } else if (reply === "display") {
+      displayNames();
+    } else if (reply === "quit") {
+      alert("Thanks for participating");
+    } else {
+      alert("Not recognized");
+    }
   }
+} else {
+  alert("Thanks, refresh to start again");
 }
