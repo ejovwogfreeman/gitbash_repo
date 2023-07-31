@@ -719,42 +719,108 @@
 
 // rooster project
 
-let rooster = [];
-let name;
+// let rooster = [];
+// let name;
 
-function addName() {
-  name = prompt("please add a name");
-  rooster.push(name);
-}
+// function addName() {
+//   name = prompt("please add a name");
+//   rooster.push(name);
+// }
 
-function removeName() {
-  name = prompt("please remove a name");
-  rooster.splice(rooster.indexOf(name), 1);
-}
+// function removeName() {
+//   name = prompt("please remove a name");
+//   rooster.splice(rooster.indexOf(name), 1);
+// }
 
-function displayNames() {
-  alert(rooster);
-}
+// function displayNames() {
+//   alert(rooster);
+// }
 
-alert("Hello welcome to my shcool");
+// alert("Hello welcome to my shcool");
 
-let question = prompt("Would you like to register? y/n");
-if (question === "y") {
-  let reply;
-  while (reply !== "quit") {
-    reply = prompt("Would you like to add, remove, display or quit?");
-    if (reply === "add") {
-      addName();
-    } else if (reply === "remove") {
-      removeName();
-    } else if (reply === "display") {
-      displayNames();
-    } else if (reply === "quit") {
-      alert("Thanks for participating");
-    } else {
-      alert("Not recognized");
-    }
-  }
-} else {
-  alert("Thanks, refresh to start again");
-}
+// let question = prompt("Would you like to register? y/n");
+// if (question === "y") {
+//   let reply;
+//   while (reply !== "quit") {
+//     reply = prompt("Would you like to add, remove, display or quit?");
+//     if (reply === "add") {
+//       addName();
+//     } else if (reply === "remove") {
+//       removeName();
+//     } else if (reply === "display") {
+//       displayNames();
+//     } else if (reply === "quit") {
+//       alert("Thanks for participating");
+//     } else {
+//       alert("Not recognized");
+//     }
+//   }
+// } else {
+//   alert("Thanks, refresh to start again");
+// }
+
+// console.log(window);
+
+// JS DOM
+// single element selector
+// document.getElementById; //selects an id
+// document.querySelector; //first of its kind
+// multiple element
+// document.getElementsByTagName;
+// document.getElementsByClassName;
+// document.querySelectorAll;
+
+// let emailInput = document.getElementById("email");
+
+// console.log(emailInput);
+
+// let paraGraphs = document.getElementsByTagName("p");
+
+// let allClass = document.getElementsByClassName("class1");
+
+// console.log(allClass);
+
+// let p = document.querySelector(".class1");
+
+// p.style.backgroundColor = "red";
+
+// let p = document.querySelectorAll("p");
+
+// let btn = document.getElementById("btn");
+
+// btn.addEventListener("click", () => {
+//   for (let i = 0; i < p.length; i++) {
+//     p[i].style.backgroundColor = "green";
+//     p[i].style.color = "white";
+//   }
+// });
+
+// console.log(p);
+
+// textContent, innerText, innerHTML;
+
+// let text = document.getElementById("id1");
+
+// console.log(text.innerHTML);
+
+let btn = document.getElementById("btn");
+let p = document.querySelector("p");
+
+btn.addEventListener("click", () => {
+  p.classList.toggle("addClass");
+});
+
+// btn.addEventListener("click", () => {
+//   p.textContent = "<h1>you clicked on the button</h1>";
+// });
+
+let div = document.createElement("div");
+
+div.textContent = "Hello i am a div";
+
+// div.setAttribute("id", "me");
+// div.setAttribute("class", "hello");
+
+div.classList.add("addClass");
+
+document.querySelector("body").appendChild(div);
