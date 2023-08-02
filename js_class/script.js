@@ -803,24 +803,54 @@
 
 // console.log(text.innerHTML);
 
-let btn = document.getElementById("btn");
-let p = document.querySelector("p");
+// let btn = document.getElementById("btn");
+// let p = document.querySelector("p");
 
-btn.addEventListener("click", () => {
-  p.classList.toggle("addClass");
-});
+// btn.addEventListener("click", () => {
+//   p.classList.toggle("addClass");
+// });
 
 // btn.addEventListener("click", () => {
 //   p.textContent = "<h1>you clicked on the button</h1>";
 // });
 
-let div = document.createElement("div");
+// let div = document.createElement("div");
 
-div.textContent = "Hello i am a div";
+// div.textContent = "Hello i am a div";
 
 // div.setAttribute("id", "me");
 // div.setAttribute("class", "hello");
 
-div.classList.add("addClass");
+// div.classList.add("addClass");
 
-document.querySelector("body").appendChild(div);
+// document.querySelector("body").appendChild(div);
+
+let form = document.getElementById("form");
+let name = document.getElementById("name");
+let email = document.getElementById("email");
+let msg = document.querySelector(".msg");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (name.value === "" || email.value === "") {
+    msg.textContent = "Plese fill all fields";
+    msg.style.display = "block";
+    msg.style.color = "red";
+    msg.style.borderColor = "red";
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 3000);
+  } else {
+    msg.textContent = "Submitted Successfully";
+    msg.style.display = "block";
+    msg.style.color = "green";
+    msg.style.borderColor = "green";
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 3000);
+    console.log({ name: name.value, email: email.value });
+    // name.value = "";
+    // email.value = "";
+    form.reset();
+  }
+});
