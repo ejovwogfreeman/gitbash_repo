@@ -60,6 +60,7 @@
 // let sentence =
 //   "Hello my name is " + myName + " and I am " + myAge + " years old";
 //   `Hello my name is ${myName} and I am ${myAge} year old`;
+
 `
 // <div>
 //     <h1>Hello world<h1>
@@ -825,32 +826,147 @@
 
 // document.querySelector("body").appendChild(div);
 
-let form = document.getElementById("form");
-let name = document.getElementById("name");
-let email = document.getElementById("email");
-let msg = document.querySelector(".msg");
+// let form = document.getElementById("form");
+// let name = document.getElementById("name");
+// let email = document.getElementById("email");
+// let msg = document.querySelector(".msg");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (name.value === "" || email.value === "") {
-    msg.textContent = "Plese fill all fields";
-    msg.style.display = "block";
-    msg.style.color = "red";
-    msg.style.borderColor = "red";
-    setTimeout(() => {
-      msg.style.display = "none";
-    }, 3000);
-  } else {
-    msg.textContent = "Submitted Successfully";
-    msg.style.display = "block";
-    msg.style.color = "green";
-    msg.style.borderColor = "green";
-    setTimeout(() => {
-      msg.style.display = "none";
-    }, 3000);
-    console.log({ name: name.value, email: email.value });
-    // name.value = "";
-    // email.value = "";
-    form.reset();
-  }
-});
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   if (name.value === "" || email.value === "") {
+//     msg.textContent = "Plese fill all fields";
+//     msg.style.display = "block";
+//     msg.style.color = "red";
+//     msg.style.borderColor = "red";
+//     setTimeout(() => {
+//       msg.style.display = "none";
+//     }, 3000);
+//   } else {
+//     msg.textContent = "Submitted Successfully";
+//     msg.style.display = "block";
+//     msg.style.color = "green";
+//     msg.style.borderColor = "green";
+//     setTimeout(() => {
+//       msg.style.display = "none";
+//     }, 3000);
+//     console.log({ name: name.value, email: email.value });
+//     // name.value = "";
+//     // email.value = "";
+//     form.reset();
+//   }
+// });
+
+// let p = document.createElement("p");
+// p.textContent = "am a new paragrah";
+
+// form.prepend(p);
+
+const company = [
+  {
+    id: 1,
+    name: "google",
+    staffs: 23,
+    startYear: 1974,
+    isTech: true,
+  },
+  {
+    id: 2,
+    name: "facebook",
+    staffs: 13,
+    startYear: 2004,
+    isTech: true,
+  },
+  {
+    id: 3,
+    name: "gucci",
+    staffs: 37,
+    startYear: 1990,
+    isTech: false,
+  },
+  {
+    id: 4,
+    name: "amazon",
+    staffs: 15,
+    startYear: 1996,
+    isTech: true,
+  },
+  {
+    id: 5,
+    name: "microsoft",
+    staffs: 25,
+    startYear: 1975,
+    isTech: true,
+  },
+  {
+    id: 6,
+    name: "starlink",
+    staffs: 29,
+    startYear: 1999,
+    isTech: true,
+  },
+  {
+    id: 7,
+    name: "Nadia",
+    staffs: 30,
+    startYear: 2005,
+    isTech: false,
+  },
+];
+
+// console.log(company);
+
+// assignment
+// 1) return only the tech companies
+// 2) claculate the total number of staffs in all the companies
+// 3) return companies the starts before 2000
+// 4) retrun the sum of staffs in the comapny with the highest number of staffs and the lowest of staffs
+// 5) retrun the number of staffs in the oldest and the youngest company
+// 7) return the companies with number of staffs greater than 30
+
+// for (let i = 0; i < company.length; i++) {
+//   if (company[i].isTech === true) {
+//     console.log(company[i]);
+//   }
+// }
+
+// console.log(company.filter((company) => company.isTech === true));
+
+// company.filter((x) => {
+//   if (x.isTech == true) {
+//     console.log(x);
+//   }
+// });
+
+// let acc = 0;
+// for (let i = 0; i < company.length; i++) {
+//   acc += company[i].staffs;
+// }
+// console.log(acc);
+
+// let staffs = [];
+// company.filter((x) => {
+//   staffs.push(x.staffs);
+// });
+// let totalStaffs = staffs.reduce((a, b) => a + b);
+
+// console.log(totalStaffs);
+
+// console.log(
+//   company
+//     .filter((x) => x.staffs)
+//     .map((x) => x.staffs)
+//     .reduce((a, b) => a + b)
+// );
+
+// for (let i = 0; i < company.length; i++) {
+//   if (company[i].startYear < 2000) {
+//     console.log(company[i]);
+//   }
+// }
+
+// let staffs = [];
+// for (let i = 0; i < company.length; i++) {
+//   staffs.push(company[i].staffs);
+// }
+// staffs.sort();
+// console.log(staffs[0] + staffs[staffs.length - 1]);

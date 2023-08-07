@@ -12,6 +12,48 @@
       sint facilis aut, quod eos expedita veritatis recusandae totam dolorum
       consequatur odit voluptas provident eum unde numquam ipsam vel ipsum.
     </p>
-    <button>click me to change color</button>
+    <button>click me to change color</button> <br />
+    <br />
+    <!-- <img src="pic_bulboff.gif" alt="" id="bulb" />
+    <button id="offBulb">off bulb</button>
+    <button id="onBulb">on bulb</button> -->
+    <h1 id="count">0</h1>
+    <button id="decrease">decrease</button>
+    <button id="reset">reset</button>
+    <button id="increase">increase</button>
   </body>
+
+  <script>
+    // let bulb = document.getElementById("bulb");
+    // let onBulb = document.getElementById("onBulb");
+    // let offBulb = document.getElementById("offBulb");
+
+    // onBulb.addEventListener("click", () => {
+    //   bulb.setAttribute("src", "pic_bulbon.gif");
+    // });
+    // offBulb.addEventListener("click", () => {
+    //   bulb.setAttribute("src", "pic_bulboff.gif");
+    // });
+
+    let inc = document.getElementById("increase");
+    let dec = document.getElementById("decrease");
+    let reset = document.getElementById("reset");
+    let count = document.getElementById("count");
+    let num = 0;
+
+    inc.addEventListener("click", () => {
+      num += 1;
+      count.textContent = num;
+    });
+
+    dec.addEventListener("click", () => {
+      num -= 1;
+      count.textContent = num;
+    });
+
+    reset.addEventListener("click", () => {
+      num = 0;
+      count.textContent = num;
+    });
+  </script>
 </html>
