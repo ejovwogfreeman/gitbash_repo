@@ -32,9 +32,9 @@ form.addEventListener("submit", (e) => {
 });
 
 function deleteTodo(id) {
-  let todo = todoArr.find((x) => x.id === id);
-  console.log(todoArr.indexOf(todo));
-  todoArr.splice(todoArr.indexOf(todo), 1);
+  let todoIndex = todoArr.find((todo) => todo.id === id);
+  console.log(todoArr.indexOf(todoIndex));
+  todoArr.splice(todoArr.indexOf(todoIndex), 1);
   displaytodo(todoArr);
 }
 
