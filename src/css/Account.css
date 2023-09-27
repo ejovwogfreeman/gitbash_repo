@@ -1,0 +1,23 @@
+.account {
+  font-size: 20px;
+}
+.account div:nth-child(1) {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.account div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}

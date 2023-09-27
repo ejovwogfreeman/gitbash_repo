@@ -1,0 +1,25 @@
+.exp {
+  color: red;
+}
+
+.inc {
+  color: green;
+}
+
+.trx {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.trx div {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trx div svg {
+  cursor: pointer;
+}
