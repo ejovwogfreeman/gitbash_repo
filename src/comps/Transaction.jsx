@@ -13,6 +13,7 @@ const Transaction = ({ transactions, deleteTransaction }) => {
       <Link to="/" className="back">
         <BsFillArrowLeftCircleFill />
       </Link>
+      <br /> <br />
       {transactions.map((x) =>
         Number(x.id) === Number(params.id) ? (
           <div key={Math.random()}>

@@ -29,6 +29,7 @@
 
 .trx .back {
   border: none;
+  color: black;
 }
 
 .trx .back svg {
