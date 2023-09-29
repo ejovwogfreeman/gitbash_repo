@@ -18,8 +18,31 @@
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
+  color: black;
+  text-decoration: none;
+  position: relative;
 }
 
 .trx div svg {
   cursor: pointer;
+}
+
+.trx .back {
+  border: none;
+}
+
+.trx .back svg {
+  font-size: 25px;
+}
+
+.details {
+  border: 1px solid black;
+  color: black;
+  border-radius: 5px;
+  padding: 2px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 12px;
 }

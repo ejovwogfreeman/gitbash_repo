@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../css/Form.css";
+import { toast } from "react-toastify";
 
 const Form = ({ addTransaction }) => {
   const [desc, setSDesc] = useState("");
@@ -8,6 +9,9 @@ const Form = ({ addTransaction }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!desc || !amount || !type) {
+      return toast.error("PLEASE FILL ALL FIELDS");
+    }
     const transaction = {
       desc: desc,
       amount: amount,
@@ -16,6 +20,7 @@ const Form = ({ addTransaction }) => {
       date: new Date(),
     };
     addTransaction(transaction);
+    toast.success("TRANSCATION ADDED SUCCESSFULLY");
     setSDesc("");
     setAmount("");
   };
