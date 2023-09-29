@@ -1,8 +1,7 @@
 import React from "react";
 import "../css/Transaction.css";
 import { BsTrash } from "react-icons/bs";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 
 const Transaction = ({ transactions, deleteTransaction }) => {

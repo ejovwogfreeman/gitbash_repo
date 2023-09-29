@@ -42,7 +42,6 @@ const App = () => {
             path="/"
             element={
               <>
-                {" "}
                 <Form addTransaction={addTransaction} />
                 <Account balance={balance} income={income} expense={expense} />
                 <Transactions
